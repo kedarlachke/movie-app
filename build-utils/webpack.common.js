@@ -14,6 +14,14 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+      {
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
